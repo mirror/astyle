@@ -3273,7 +3273,7 @@ void ASOptions::parseOption(const std::string& arg, const std::string& errorInfo
 		std::string spaceNumParam = getParam(arg, "t", "indent=tab=");
 		if (spaceNumParam.length() > 0)
 			spaceNum = atoi(spaceNumParam.c_str());
-		if (spaceNum < 2 || spaceNum > 20)
+		if (spaceNum > 20)
 			isOptionError(arg, errorInfo);
 		else
 		{
@@ -3324,7 +3324,7 @@ void ASOptions::parseOption(const std::string& arg, const std::string& errorInfo
 		std::string spaceNumParam = getParam(arg, "s", "indent=spaces=");
 		if (spaceNumParam.length() > 0)
 			spaceNum = atoi(spaceNumParam.c_str());
-		if (spaceNum < 2 || spaceNum > 20)
+		if (spaceNum > 20)
 			isOptionError(arg, errorInfo);
 		else
 		{
